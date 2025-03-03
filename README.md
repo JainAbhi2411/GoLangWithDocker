@@ -32,24 +32,12 @@ Database: MongoDB
 Real-time Updates: WebSockets
 📂 Project Setup
 1️⃣ Clone the Repository
-
-bash
-Copy
-Edit
 git clone https://github.com/yourusername/docker-dashboard.git
 cd docker-dashboard
 2️⃣ Start the Go Backend
-
-bash
-Copy
-Edit
 cd backend
 go run main.go
 3️⃣ Start the React Frontend
-
-bash
-Copy
-Edit
 cd frontend
 npm install
 npm start
