@@ -19,14 +19,12 @@ export const Terminal = () => {
     }
 
     try {
-      const response = await fetch(`${apiUrl}/cmd.py`, {
+      const response = await fetch(`${apiUrl}/execute`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
-        body: new URLSearchParams({
-          command: command
-        })
+        body: JSON.stringify({ command })
       });
 
       if (!response.ok) {
