@@ -36,6 +36,7 @@ export const ContainerList = () => {
   };
 
   const callApi = async (endpoint, method = "POST", body = {}) => {
+    console.log(endpoint, method, body);
     try {
       const response = await fetch(`${apiUrl}/api/${endpoint}`, {
         method: method,
@@ -43,6 +44,7 @@ export const ContainerList = () => {
         body: method === "POST" ? JSON.stringify(body) : null,
       });
       const data = await response.json();
+      console.log(data);  
       if (response.ok) {
         if (endpoint === "start-docker") 
         setSnackbarOpen(true);
@@ -54,17 +56,6 @@ export const ContainerList = () => {
       console.error("API call failed:", error);
     }
   };
-
-  const handleDockerServerToggle = (event) => {
-    if (event.target.checked) {
-      callApi("start-docker");
-      setDockerServerRunning(true);
-    } else {
-      callApi("stop-docker");
-      setDockerServerRunning(false);
-    }
-  };
-
   const handleDeleteContainer = (containerName) => {
     callApi("delete-container", "POST", { name: containerName });
   };
@@ -75,6 +66,15 @@ export const ContainerList = () => {
 
   const handleStopContainer = (containerName) => {
     callApi("stop-container", "POST", { name: containerName });
+  };
+  const handleDockerServerToggle = (event) => {
+    if (event.target.checked) {
+      callApi("start-docker");
+      setDockerServerRunning(true);
+    } else {
+      callApi("stop-docker");
+      setDockerServerRunning(false);
+    }
   };
 
   const handleSnackbarClose = () => {
