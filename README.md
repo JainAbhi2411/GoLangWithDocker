@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+🚀 Docker Management Dashboard (MERN + Golang)
+A real-time Docker management dashboard built using the MERN stack for the frontend and Go (Golang) for the backend. This project enables users to efficiently manage Docker containers and images with a seamless UI and high-performance API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🦾 Powered by Golang
+The backend is developed in Go (Golang) to ensure high-speed execution, concurrency handling, and optimized performance for Docker operations. Go’s efficiency in handling multiple requests makes this project highly responsive for real-time container management.
 
-## Available Scripts
+🌟 Features
+✅ Real-time Docker Container Management
 
-In the project directory, you can run:
+Start, Stop, and Delete containers instantly
+View live container status updates
+Access a live terminal to execute Docker commands inside a running container
+✅ Docker Image Management
 
-### `npm start`
+Pull, Delete, and Manage images
+Launch new containers from images
+Configure containers with dynamic settings (ports, volumes, environment variables)
+✅ Optimized Golang Backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Built with Go’s lightweight and high-performance API
+Uses Go routines and concurrency for fast request handling
+Communicates with Docker Engine using Go’s Docker SDK
+✅ Interactive UI with Real-time Data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Graphical representation of containers & resource usage
+Live Docker inspect details (CPU, Memory, Network, etc.)
+Intuitive search & filter options for easy navigation
+🛠 Tech Stack
+Frontend: React, Redux, TailwindCSS
+Backend: Go (Golang), Docker SDK
+Database: MongoDB
+Real-time Updates: WebSockets
+📂 Project Setup
+1️⃣ Clone the Repository
+git clone https://github.com/yourusername/docker-dashboard.git
+cd docker-dashboard
+2️⃣ Start the Go Backend
+cd backend
+go run main.go
+3️⃣ Start the React Frontend
+cd frontend
+npm install
+npm start
+🤝 Contributions
+Contributions are welcome! If you have ideas for enhancements, feel free to open an issue or submit a pull request.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
